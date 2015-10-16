@@ -1,0 +1,9 @@
+Dog. dog. DOG. DoG. dOg. -- Count words regardless of capitalization?
+
+Dog's ball. Dog's ball. Dog's ball. -- Possessives?
+
+Dogs' food. Dogs' food. Dogs' food. -- Plural possessives?
+
+Spot is a 7 year-old Labrador who is well-respected in his pack. -- Hyphenated words?
+
+"Go get the ball, Spot," Brad said, "it's time for us to go home." (He was worried the [sic] would be late.) -- Ignore punctuation?

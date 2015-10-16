@@ -12,7 +12,7 @@ from prettytable import PrettyTable
 display = PrettyTable(["Word", "Times in File"])
 text_file = open(raw_input("What file do you want to analyze? "))
 words_in_file = re.findall(r'\w+\'\w+|\'\w+|\w+\'|\w+\-\w+|\w+', text_file.read())
-table = {}
+table = {} # will store each word and the number of times it appears in the file as key, value pair.
 
 for word in words_in_file:
   word = word.lower()
@@ -29,10 +29,10 @@ def count_words_frequency():
   print display
 		
 # Sort Words Alphabetically
-def count_words():
+def count_words_alphabet():
   for word in sorted(table.keys()):
     display.add_row([word, table[word]])
   print display
   
 count_words_frequency()
-# count_words()
+# count_words_alphabet()
