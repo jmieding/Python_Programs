@@ -1,6 +1,16 @@
-# Python 2.7.10 
-# Finds the nth number in the fibonacci sequence. 
-# This program assumes that 0 is the "zeroth" number in the sequence and the first 1 is the first number.
+"""
+Python 2.7.10 
+
+Puzzle: Find the nth number in the fibonacci sequence. The nth number
+is provided by the user.
+
+This program assumes that 0 is the "zeroth" number in the sequence and 
+the first 1 is the first number.
+
+Wrote recursive solution for kicks.
+
+"""
+
 
 num = int(raw_input("Which number in the fibonacci sequence would you like to know? "))
 sequence = [0, 1]
