@@ -1,3 +1,10 @@
+""""
+Python 2.7.10
+
+This program simulates rolling two six-sided die.
+
+"""
+
 import random
 
 def roll():

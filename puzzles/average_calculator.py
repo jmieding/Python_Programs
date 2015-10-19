@@ -1,3 +1,11 @@
+"""
+Python 2.7.10
+
+This program returns an average (arithmetic mean) given
+user-provided numbers. It ignores high and low outliers.
+
+"""
+
 def average_no_high_low(nums):
   organize = sorted(nums)
   no_high_low = organize[1:-1]
