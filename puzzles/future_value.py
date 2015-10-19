@@ -1,5 +1,17 @@
-# Python 2.7.10
-# This program calculates the future value of a given amount with compounding interest.
+"""
+Python 2.7.10
+
+Puzzle: Compound Interest Calculator
+
+This program calculates the future value of principal given user-provided
+arguments for principal, annual interest rate, times compounded per year,
+and the number of years interest is compounded.
+
+The mathematical solution is simple, so I decided to write iterative and
+recursive solutions for more practice.
+
+"""
+
 
 print "\nFuture Value Calculator\n"
 
@@ -18,7 +30,7 @@ print "\nSimple Solution: ", format(total, '.2f')
 def compound_interest_iterative(principal, annual_interest_rate, times_compounded, years):
   total = principal
   for i in range(1, years + 1):
-      total += total * (annual_interest_rate/times_compounded)
+    total += total * (annual_interest_rate/times_compounded)
   print "\nIterative Solution:", format(total, '.2f')
 
 compound_interest_iterative(principal, annual_interest_rate, times_compounded, years)
