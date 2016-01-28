@@ -9,7 +9,7 @@ Find the sum of all the primes below two million.
 """
 
 def summation_of_primes():
-  primes_to_two_million = [x for x in xrange(3, 2000001, 2) if x % 3 != 0 and x % 5 != 0 and x % 7 !=0]
+  primes_to_two_million = [x for x in xrange(3, 2000000, 2) if x % 3 != 0 and x % 5 != 0 and x % 7 !=0]
   final_sum = sum(primes_to_two_million)
   return final_sum
 
