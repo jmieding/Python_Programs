@@ -36,7 +36,9 @@ import re
 import urllib2
 
 def largest_product_in_series(series_length):
-  
+  """this function finds the largest product for a series of any length, not
+        just those that are 13 digits long"""
+
   url = "https://projecteuler.net/problem=8"
   page_text = urllib2.urlopen(url).read()
   lines = re.findall(r'[0-9]+(?=<br />)', page_text)
@@ -46,13 +48,13 @@ def largest_product_in_series(series_length):
   for line in lines:
     thousand_digit_number += line
   series_no_zeros = thousand_digit_number.split("0")
-  # extract all series that do not include the number 0
+  # extract all series(pl) that do not include the number 0
 
   start, stop = 0, series_length
-  """passed as indices to create multiple n-character slices from series that 
-        are larger than n characters"""
+  """passed as indices to create n-digit slices from each series in
+        series_no_zeros that is longer than n digits"""
   series_product = 1
-  # result of multiplying every number in a series
+  # hold result of multiplying every number in each series
   largest_product = [0, 'series']
   # holds final output of largest product and the series that produces it.
 
