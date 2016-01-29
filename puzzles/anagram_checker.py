@@ -2,11 +2,11 @@
 Python 2.7.10
 
 Puzzle: Given a string as an argument, write a function that returns
-True if the string is palindrome, and False otherwise.
+True if the string is an anagram, and False otherwise.
 """
 from itertools import permutations
 
-def palindrome_checker(word):
+def anagram_checker(word):
   all_combos_of_word = permutations(word, len(word))
   for combo in all_combos_of_word:
     if combo == combo[::-1]:
@@ -15,7 +15,7 @@ def palindrome_checker(word):
       pass
   return False
 
-print palindrome_checker('civic')
-print palindrome_checker('cciiv')
-print palindrome_checker('cat')
-print palindrome_checker('cta')
+print anagram_checker('civic')
+print anagram_checker('cciiv')
+print anagram_checker('cat')
+print anagram_checker('cta')
