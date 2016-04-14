@@ -26,29 +26,21 @@ What is the value of the first triangle number to have over five hundred divisor
 # So, for each number, you need to generate all prime factors, count the number of times each occurs,
 # then add one to the exponents, and multiply them for the total number of factors.
 
-from collections import Counter
-
-import timeit
-
 def count_divisors(triangle_num):
   divisors = 1
-  prime_factors = []
-  
+  exponent = 0
   while triangle_num % 2 == 0:
-    prime_factors.append(2)
+    exponent += 1
     triangle_num /= 2
-  
+  divisors *= exponent + 1
   prime = 3
   while triangle_num > 1:
+    exponent = 0
     while triangle_num % prime == 0:
-      prime_factors.append(prime)
+      exponent += 1
       triangle_num /= prime
     prime += 2
-  
-  prime_exponents = Counter(prime_factors).values()
-  for exponent in prime_exponents:
     divisors *= exponent + 1
-
   return divisors
 
 def generate_triangles():
@@ -62,6 +54,5 @@ def generate_triangles():
       return triangle_num, total_divisors
     else:
       print "num is {}. {} divisors is less than 500" .format(triangle_num, total_divisors)
-  return triangle_num, total_divisors
 
-generate_triangles()
+print generate_triangles()
