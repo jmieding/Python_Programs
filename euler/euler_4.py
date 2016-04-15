@@ -9,10 +9,11 @@ Find the largest Palindrome made from the product of two 3-digit numbers.
 
 
 def largest_palindrome_product():
-
-  for num1 in (xrange(999, 0, -1)):
+  largest = 0
+  for num1 in xrange(999, 0, -1):
     for num2 in xrange(999, 0, -1):
-      if str(num1 * num2) == str(num1 * num2)[::-1]:
-        return str(num1 * num2)
+      if str(num1 * num2) == str(num1 * num2)[::-1] and num1 * num2 > largest:
+          largest = num1 * num2
+  return largest
 
 print largest_palindrome_product()
