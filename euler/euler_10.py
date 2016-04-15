@@ -11,11 +11,9 @@ primes = [2]
 total_sum = 2
 
 def is_a_prime(num):
-  # for i in xrange(2, int(num/2)):
   for i in primes:
     if i > int(num/2):
       primes.append(num)
-      print num
       return True
     if num % i == 0: 
       return False
