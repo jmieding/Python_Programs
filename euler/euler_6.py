@@ -26,4 +26,4 @@ def sum_square_difference(number):
 
 print sum_square_difference(10)
 print sum_square_difference(3)
-print sum_square_difference(20)
+print sum_square_difference(100)
